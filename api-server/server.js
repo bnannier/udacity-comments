@@ -11,7 +11,7 @@ const comments = require('./comments')
 const app = express()
 
 app.use(express.static('public'))
-app.use(cors())
+// app.use(cors())
 
 
 app.get('/', (req, res) => {
