@@ -11,7 +11,7 @@ const comments = require('./comments')
 const app = express()
 
 app.use(express.static('public'))
-// app.use(cors())
+app.use(cors())
 
 
 app.get('/', (req, res) => {
@@ -112,18 +112,25 @@ app.get('/', (req, res) => {
     res.send(help)
 })
 
-app.use((req, res, next) => {
-    const token = req.get('Authorization')
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 
-    if (token) {
-        req.token = token
-        next()
-    } else {
-        res.status(403).send({
-        error: 'Please provide an Authorization header to identify yourself (can be whatever you want)'
-    })
-}
-})
+// app.use((req, res, next) => {
+//     const token = req.get('Authorization');
+//     console.log(token)
+//
+//     if (token) {
+//         req.token = token
+//         next()
+//     } else {
+//         res.status(403).send({
+//             error: 'Please provide an Authorization header to identify yourself (can be whatever you want)'
+//         })
+//     }
+// })
 
 
 app.get('/categories', (req, res) => {
