@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Config from './Config'
 
 class App extends Component {
     constructor(props) {
@@ -10,8 +11,7 @@ class App extends Component {
 
     componentDidMount() {
         // const url = `${process.env.REACT_APP_BACKEND}/categories`;
-        const url = `http://localhost:3001/categories`;
-        console.log('fetching from url', url);
+        const url = Config.settings.url + `/categories`;
         fetch(url, {
             headers: {'Authorization': 'whatever-you-want'},
             // credentials: 'include'
@@ -20,7 +20,6 @@ class App extends Component {
             .then((data) => {
                 this.setState({categories: data.categories})
             })
-            .then(console.log('this.state.categories', this.state.categories))
     }
 
     render() {
