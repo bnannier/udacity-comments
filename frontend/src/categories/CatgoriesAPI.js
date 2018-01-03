@@ -1,6 +1,5 @@
 import Config from '../Config'
 
-
 const api = Config.settings.url;
 
 const headers = {
@@ -30,15 +29,15 @@ export const getAll = () =>
 
 
 // componentDidMount() {
-//     // const url = `${process.env.REACT_APP_BACKEND}/categories`;
-//     const url = Config.settings.url + `/categories`;
+//     // const url = `${process.env.REACT_APP_BACKEND}/Categories`;
+//     const url = Config.settings.url + `/Categories`;
 //     fetch(url, {
 //         headers: {'Authorization': 'whatever-you-want'},
 //         // credentials: 'include'
 //     })
 //         .then((res) => res.json())
 //         .then((data) => {
-//             this.setState({categories: data.categories})
+//             this.setState({Categories: data.Categories})
 //         })
 // }
 
