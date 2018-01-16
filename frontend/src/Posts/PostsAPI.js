@@ -8,7 +8,10 @@ const headers = {
 }
 
 export const getAllPostsForCategory = (category) =>
-    fetch(`${api}/${category}/posts`, { headers })
+    fetch(`${api}/${category}/posts`, {
+      method: 'GET',
+      headers,
+    })
         .then(res => res.json())
-        .then(data => data.posts)
+        .then(data => data)
 
