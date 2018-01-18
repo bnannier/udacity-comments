@@ -5,3 +5,18 @@
 .grid-margin {
     margin: 20px;
 }
+
+.categories-header {
+    height: 34px;
+}
+
+.categories-header-left {
+    margin: 6px 0 0 0;
+    float: left;
+    position: relative;
+}
+
+.categories-header-right {
+    float: right;
+    position: relative;
+}
