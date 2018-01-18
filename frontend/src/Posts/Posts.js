@@ -20,9 +20,11 @@ class Posts extends Component {
      * @description Load all Posts for a certain Category.
      */
     loadAllPosts = () => {
-        PostsAPI.getAllPostsForCategory(this.state.category).then((posts) => {
-            this.setState({posts});
-        });
+        if(this.state.category == undefined) {
+            PostsAPI.getAllPostsForCategory(this.state.category).then((posts) => {
+                this.setState({posts});
+            });
+        }
     }
 
     render() {

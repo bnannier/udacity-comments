@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import { Col, Grid, Row } from 'react-bootstrap'
 import Categories from './Categories'
+import Posts from "./Posts/Posts";
 
 class App extends Component {
     render() {
@@ -14,7 +15,7 @@ class App extends Component {
                                 <Categories />
                             </Col>
                             <Col xs={9} md={9}>
-                                wow
+                                <Posts />
                             </Col>
                         </Row>
                     </Grid>
