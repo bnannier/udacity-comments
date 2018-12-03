@@ -20,7 +20,7 @@ class Posts extends Component {
      * @description Load all Posts for a certain Category.
      */
     loadAllPosts = () => {
-        if(this.state.category == undefined) {
+        if(this.state.category === undefined) {
             PostsAPI.getAllPostsForCategory(this.state.category).then((posts) => {
                 this.setState({posts});
             });

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import { Col, Grid, Row } from 'react-bootstrap'
-import Categories from './Categories'
+import { Categories } from './Categories'
 import Posts from "./Posts/Posts";
 
 class App extends Component {
